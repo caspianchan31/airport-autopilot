@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Credits and Licences · Airport Autopilot</title>
+<meta name="description" content="Map, terrain and imagery sources and licences used in Airport Autopilot (机场搭子).">
+<style>
+  :root {
+    --bg: #f6f7f9; --surface: #ffffff; --text: #18202c; --muted: #566273; --line: #dfe3e9;
+    --accent: #1d5bab; --note-bg: #eef3fb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e141d; --surface: #151d29; --text: #e5eaf1; --muted: #9ba7b6; --line: #273345;
+      --accent: #86b6ff; --note-bg: #1a2638;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; }
+  header { border-bottom: 1px solid var(--line); padding-bottom: 12px; margin-bottom: 8px; }
+  .app { font-weight: 700; font-size: 15px; color: var(--muted); letter-spacing: .02em; }
+  nav { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 15px; margin-top: 6px; }
+  nav a { color: var(--accent); text-decoration: none; }
+  nav a[aria-current="page"] { color: var(--text); font-weight: 600; }
+  .lang { margin-top: 8px; font-size: 14px; color: var(--muted); }
+  .lang a { color: var(--accent); }
+  h1 { font-size: 28px; line-height: 1.25; margin: 28px 0 4px; }
+  h2 { font-size: 19px; margin: 32px 0 8px; }
+  p, li { max-width: 68ch; }
+  ul { padding-left: 22px; }
+  a { color: var(--accent); overflow-wrap: anywhere; }
+  .meta { color: var(--muted); font-size: 14px; margin: 0 0 16px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; margin: 10px 0; }
+  .card h3 { font-size: 16.5px; margin: 0 0 2px; }
+  .card .use { color: var(--muted); font-size: 14px; margin: 0 0 8px; }
+  .attr { margin: 0 0 8px; padding: 0; list-style: none; }
+  .attr li { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13.5px; line-height: 1.5;
+             background: var(--note-bg); border-radius: 6px; padding: 5px 8px; margin: 4px 0; overflow-wrap: anywhere; }
+  .facts { font-size: 14.5px; margin: 0; }
+  .facts span { color: var(--muted); }
+  .path { font-weight: 600; }
+  section + section { border-top: 1px solid var(--line); margin-top: 40px; }
+  footer { margin-top: 40px; padding-top: 12px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="app">Airport Autopilot · 机场搭子</div>
+  <nav aria-label="Pages">
+    <a href="privacy.html">Privacy · 隐私</a>
+    <a href="support.html">Support · 支持</a>
+    <a href="terms.html">Terms · 条款</a>
+    <a href="credits.html" aria-current="page">Credits · 数据来源</a>
+  </nav>
+  <div class="lang"><a href="#en" hreflang="en">English</a> · <a href="#zh" hreflang="zh-Hans">简体中文</a></div>
+</header>
+
+<section id="en" lang="en">
+<h1>Credits and licences</h1>
+<p class="meta">Also in the app: <span class="path">Settings → About → Credits &amp; licences</span></p>
+<p>Innsbruck's terrain, airport and town in Airport Autopilot are built from the open data below. Each source is credited as its licence requires, using the wording its owner asks for. None of these organisations made, sponsors or endorses the game.</p>
+
+<h2>Map, imagery and terrain data</h2>
+
+<div class="card">
+  <h3>Aerial imagery of Tyrol</h3>
+  <p class="use">Photo texture of the terrain around Innsbruck</p>
+  <ul class="attr"><li>Datenquelle: Land Tirol - data.tirol.gv.at</li></ul>
+  <p class="facts"><span>Dataset:</span> Orthofoto Tirol (WMS) · <span>Licence:</span> <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · <a href="https://www.tirol.gv.at/data/nutzungsbedingungen/">Terms of use</a> · <a href="https://www.data.gv.at/katalog/dataset/35691b6c-9ed7-4517-b4b3-688b0569729a">Source</a><br>
+  <span>Changes:</span> shading removed, colours adjusted, resampled; the airport grounds repainted as grass.</p>
+</div>
+
+<div class="card">
+  <h3>Satellite imagery outside Tyrol</h3>
+  <p class="use">Distant terrain towards Bavaria and South Tyrol</p>
+  <ul class="attr"><li>EOxCloudless https://cloudless.eox.at by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2016)</li></ul>
+  <p class="facts"><span>Layer:</span> 2016 mosaic · <span>Licence:</span> <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · <a href="https://cloudless.eox.at">Source</a><br>
+  <span>Changes:</span> colours matched to the aerial imagery, resampled.</p>
+</div>
+
+<div class="card">
+  <h3>basemap.at</h3>
+  <p class="use">Reference imagery for placing stands and ground markings</p>
+  <ul class="attr"><li>Datenquelle: <a href="https://basemap.at">basemap.at</a></li></ul>
+  <p class="facts"><span>Licence:</span> <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> (Open Government Data Austria) · <a href="https://basemap.at/en/">Source</a></p>
+</div>
+
+<div class="card">
+  <h3>Elevation</h3>
+  <p class="use">Heights of the mountains and the Inn valley</p>
+  <ul class="attr">
+    <li>Terrain Tiles (Tilezen Joerd), Registry of Open Data on AWS</li>
+    <li>Austria terrain data © offene Daten Österreichs – Digitales Geländemodell (DGM) Österreich</li>
+    <li>Europe terrain data produced using Copernicus data and information funded by the European Union - EU-DEM layers</li>
+    <li>United States 3DEP (formerly NED) and global GMTED2010 and SRTM terrain data courtesy of the U.S. Geological Survey.</li>
+    <li>Global ETOPO1 terrain data U.S. National Oceanic and Atmospheric Administration</li>
+  </ul>
+  <p class="facts"><span>Licences:</span> DGM Österreich under <a href="https://creativecommons.org/licenses/by/3.0/at/deed.en">CC BY 3.0 AT</a>; the other sources as listed in the <a href="https://github.com/tilezen/joerd/blob/master/docs/attribution.md">Joerd attribution notes</a> · <a href="https://registry.opendata.aws/terrain-tiles/">Source</a><br>
+  <span>Changes:</span> mesh simplified, airport area flattened.</p>
+</div>
+
+<div class="card">
+  <h3>OpenStreetMap</h3>
+  <p class="use">Positions of the runway, taxiways, aprons, terminal and town buildings</p>
+  <ul class="attr">
+    <li>© OpenStreetMap contributors</li>
+    <li>Contains information from OpenStreetMap, which is made available here under the Open Database License (ODbL).</li>
+  </ul>
+  <p class="facts"><span>Licence:</span> <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL 1.0</a> · <a href="https://www.openstreetmap.org/copyright">openstreetmap.org/copyright</a></p>
+</div>
+
+<div>
+  <div class="card">
+    <h3>Live weather</h3>
+    <p class="use">METAR weather reports for Innsbruck Airport (LOWI)</p>
+    <ul class="attr"><li>Aviation Weather Center, NOAA / National Weather Service — aviationweather.gov</li></ul>
+    <p class="facts"><span>Licence:</span> public domain (U.S. Government work), see the <a href="https://www.weather.gov/disclaimer">NWS disclaimer</a>. The game is not affiliated with or endorsed by NOAA or the NWS.</p>
+  </div>
+</div>
+
+<h2>Typefaces</h2>
+<div class="card">
+  <p class="facts">The lettering on the aircraft liveries is drawn into the textures with these typefaces (no font files are included in the app):<br>
+  Inter — Copyright 2016 The Inter Project Authors · Noto Sans CJK — © 2014-2021 Adobe · both under the <a href="https://openfontlicense.org">SIL Open Font License 1.1</a></p>
+</div>
+
+<h2>Software</h2>
+<div class="card">
+  <p class="facts">The app contains no third-party code libraries. The game code, shaders and simulation are our own, built on Apple's system frameworks.</p>
+</div>
+
+<h2>Game content</h2>
+<div class="card">
+  <p class="facts">All airlines, liveries, aircraft types, flights and radio call signs in the game are fictional and were made for this game. Innsbruck Airport is shown as a real place; the game is not affiliated with or endorsed by the airport's operator.</p>
+</div>
+</section>
+
+<section id="zh" lang="zh-Hans">
+<h1>数据来源与许可</h1>
+<p class="meta">App 内同样可以查看：<span class="path">设置 → 关于 → 数据来源与许可</span></p>
+<p>机场搭子里因斯布鲁克的地形、机场和城镇，是用下列开放数据制作的，并按各自许可、用权利人要求的措辞注明来源。署名保留原文。这些机构都没有参与制作、赞助或认可本游戏。</p>
+
+<h2>地图、影像与地形数据</h2>
+
+<div class="card">
+  <h3>蒂罗尔州航拍影像</h3>
+  <p class="use">因斯布鲁克周边地形表面的照片</p>
+  <ul class="attr"><li>Datenquelle: Land Tirol - data.tirol.gv.at</li></ul>
+  <p class="facts"><span>数据集：</span>Orthofoto Tirol（WMS） · <span>许可：</span><a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans">CC BY 4.0</a> · <a href="https://www.tirol.gv.at/data/nutzungsbedingungen/">使用条款</a> · <a href="https://www.data.gv.at/katalog/dataset/35691b6c-9ed7-4517-b4b3-688b0569729a">来源</a><br>
+  <span>修改：</span>去除阴影、调色、重采样，机场范围改绘为草地。</p>
+</div>
+
+<div class="card">
+  <h3>蒂罗尔以外的卫星影像</h3>
+  <p class="use">巴伐利亚和南蒂罗尔方向的远景</p>
+  <ul class="attr"><li>EOxCloudless https://cloudless.eox.at by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2016)</li></ul>
+  <p class="facts"><span>图层：</span>2016 年版 · <span>许可：</span><a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans">CC BY 4.0</a> · <a href="https://cloudless.eox.at">来源</a><br>
+  <span>修改：</span>按航拍影像调色、重采样。</p>
+</div>
+
+<div class="card">
+  <h3>basemap.at</h3>
+  <p class="use">摆放机位和地面标线时参考的影像</p>
+  <ul class="attr"><li>Datenquelle: <a href="https://basemap.at">basemap.at</a></li></ul>
+  <p class="facts"><span>许可：</span><a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans">CC BY 4.0</a>（奥地利政府开放数据） · <a href="https://basemap.at/en/">来源</a></p>
+</div>
+
+<div class="card">
+  <h3>地形高程</h3>
+  <p class="use">山体和因河河谷的高度</p>
+  <ul class="attr">
+    <li>Terrain Tiles (Tilezen Joerd), Registry of Open Data on AWS</li>
+    <li>Austria terrain data © offene Daten Österreichs – Digitales Geländemodell (DGM) Österreich</li>
+    <li>Europe terrain data produced using Copernicus data and information funded by the European Union - EU-DEM layers</li>
+    <li>United States 3DEP (formerly NED) and global GMTED2010 and SRTM terrain data courtesy of the U.S. Geological Survey.</li>
+    <li>Global ETOPO1 terrain data U.S. National Oceanic and Atmospheric Administration</li>
+  </ul>
+  <p class="facts"><span>许可：</span>奥地利 DGM 为 <a href="https://creativecommons.org/licenses/by/3.0/at/deed.zh-hans">CC BY 3.0 AT</a>，其余按 <a href="https://github.com/tilezen/joerd/blob/master/docs/attribution.md">Joerd 署名说明</a> · <a href="https://registry.opendata.aws/terrain-tiles/">来源</a><br>
+  <span>修改：</span>网格简化，机场区域压平。</p>
+</div>
+
+<div class="card">
+  <h3>OpenStreetMap</h3>
+  <p class="use">跑道、滑行道、停机坪、航站楼和城镇建筑的位置</p>
+  <ul class="attr">
+    <li>© OpenStreetMap contributors</li>
+    <li>Contains information from OpenStreetMap, which is made available here under the Open Database License (ODbL).</li>
+  </ul>
+  <p class="facts"><span>许可：</span><a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL 1.0</a> · <a href="https://www.openstreetmap.org/copyright">openstreetmap.org/copyright</a></p>
+</div>
+
+<div>
+  <div class="card">
+    <h3>实时天气</h3>
+    <p class="use">因斯布鲁克机场（LOWI）的 METAR 天气报文</p>
+    <ul class="attr"><li>Aviation Weather Center, NOAA / National Weather Service — aviationweather.gov</li></ul>
+    <p class="facts"><span>许可：</span>公有领域（美国政府作品），见 <a href="https://www.weather.gov/disclaimer">NWS 免责声明</a>。本游戏与 NOAA、NWS 无关联，也未获其认可。</p>
+  </div>
+</div>
+
+<h2>字体</h2>
+<div class="card">
+  <p class="facts">飞机涂装上的文字用以下字体画进贴图（App 里不含字体文件）：<br>
+  Inter — Copyright 2016 The Inter Project Authors · Noto Sans CJK — © 2014-2021 Adobe · 均为 <a href="https://openfontlicense.org">SIL Open Font License 1.1</a></p>
+</div>
+
+<h2>软件</h2>
+<div class="card">
+  <p class="facts">本 App 不含第三方代码库。游戏代码、着色器和模拟都是自己写的，基于 Apple 的系统框架。</p>
+</div>
+
+<h2>游戏内容</h2>
+<div class="card">
+  <p class="facts">游戏中的航空公司、涂装、机型、航班和无线电呼号全部是为本游戏虚构的。因斯布鲁克机场作为真实地点出现；本游戏与机场运营方无关联，也未获其认可。</p>
+</div>
+</section>
+
+<footer>
+  © 2026 Caspian. The attribution lines above belong to their respective owners. 上述署名归各自权利人所有。
+</footer>
+</div>
+<script>
+  try { if (!location.hash && /^zh/i.test(navigator.language || "")) location.replace("#zh"); } catch (e) {}
+</script>
+</body>
+</html>
